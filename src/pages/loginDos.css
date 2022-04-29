@@ -5,11 +5,11 @@
 }
 
 .bgColor{
-    opacity: .8;
+    /* opacity: .8; */
     background: #00b7ea; /* Old browsers */
     background: -moz-linear-gradient(-45deg,  #00b7ea 0%, #c45ebd 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg,  #00b7ea 0%,#c45ebd 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg,  #00b7ea 0%,#c45ebd 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(135deg,  #00b7ea90 0%,#c45ebd90 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#c45ebd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     
 }

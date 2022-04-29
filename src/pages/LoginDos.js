@@ -54,22 +54,22 @@ const handleSubmit=async (e)=>{
 }
 
   return (
-    <div className="grid banner grid-cols-12">
-      <div className="col-span-4 text-white  font-sans font-bold bgColor min-h-screen pl-7">
+    <div className="grid banner max-h-screen h-screen grid-cols-12">
+      <div className="col-span-3 text-white font-sans font-bold bgColor">
         
-        <div className="grid grid-rows-6 grid-flow-col min-h-screen items-center justify-items-start">
+        <div className="flex flex-col gap-3 max-h-screen  justify-between">
           <img
             src={imgLogo}
             alt=""
-            className="logoLogin w-40 absolute top-0 left-5 mt-10 ml-2"
+            className="logoLogin h-auto h-28 my-5  mx-auto"
           />
           <form
             onSubmit={handleSubmit}
-            className="row-span-4 row-start-2 text-4xl"
+            className="text-3xl w-full px-5"
           >
-            Ingresar
-            <div className="pt-10 pr-20">
-              <label className="text-sm font-sans text-black font-bold">
+           <h1 className="text-gray-900">Ingresar</h1> 
+            <div className="">
+              <label className="text-sm font-sans text-black font-medium">
                 Usuario
               </label>
               <input
@@ -77,11 +77,11 @@ const handleSubmit=async (e)=>{
                 name="email"
                 onChange={handleChange}
                 placeholder="Escribe aquí tu email"
-                className="w-full bg-white py-3 px-8 border text-black font-medium rounded shadow text-base font-sans"
+                className="w-full bg-white py-3 px-4 border text-black font-medium rounded shadow text-base font-sans"
               />
             </div>
-            <div className="pt-2 pr-20">
-              <label className="text-sm font-sans text-black font-bold">
+            <div className="">
+              <label className="text-sm font-sans text-black font-medium">
                 Contraseña
               </label>
               <input
@@ -89,20 +89,20 @@ const handleSubmit=async (e)=>{
                 name="password"
                 onChange={handleChange}
                 placeholder="Escribe aqui tu contraseña"
-                className="w-full bg-white py-3 px-8 text-black border font-medium rounded shadow text-base font-sans"
+                className="w-full bg-white py-3 px-4 text-black border font-medium rounded shadow text-base font-sans"
               />
-              <Link
+              {/* <Link
                 to="/hola"
                 className="text-sm font-sans font-medium text-gray-600 underline"
               >
                 ¿Olvidaste la Contraseña?
-              </Link>
+              </Link> */}
             </div>
             {/* <!-- Button --> */}
-            <div className="text-sm font-sans font-medium w-full pr-20 pt-14">
+            <div className="text-lg font-sans  w-full mx-auto pt-10">
               <button
                 type="submit"
-                className="text-center font-bold text-lg w-full py-3 bg-blue-500 hover:bg-red-300 duration-300 rounded-md text-white"
+                className="text-center  font-medium px-5 py-2 bg-blue-500 hover:bg-blue-300 hover:text-gray-500 duration-300 rounded-md text-white"
               >
                 Ingresar
               </button>
