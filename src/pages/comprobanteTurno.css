@@ -1,0 +1,48 @@
+
+td,
+th,
+tr,
+table {
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+
+td.producto,
+th.producto {
+    width: 75px;
+    max-width: 75px;
+}
+
+td.cantidad,
+th.cantidad {
+    width: 40px;
+    max-width: 40px;
+    word-break: break-all;
+}
+
+td.precio,
+th.precio {
+    width: 40px;
+    max-width: 40px;
+}
+
+.centrado {
+    text-align: center;
+    align-content: center;
+}
+
+.ticket {
+    width: 100%;
+    max-width: 90%;
+}
+
+.imgTicket {
+    max-width: 70%;
+    width: inherit;
+    filter: grayscale();
+}
+
+.footerTicket{
+    margin-bottom:0px;
+    width: 100%;
+}

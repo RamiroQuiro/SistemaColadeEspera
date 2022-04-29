@@ -1,0 +1,46 @@
+.containerInicio{
+    
+
+
+background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #00b7ea 0%, #c45ebd 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #00b7ea 0%,#c45ebd 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #00b7ea 0%,#c45ebd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#c45ebd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.backgroundImg {
+    background: url( 'https://s1.1zoom.me/big0/728/Handbag_Dogs_Yorkshire_terrier_Hands_Hat_Glasses_597125_1280x853.jpg' );
+    background-repeat: no-repeat;
+    background-size: cover   
+    
+}
+
+.backgroundImg:after{
+    content:"";
+    position: absolute;
+    z-index: 0;
+    top: 0;    
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #00b7ea 0%, #c45ebd 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #00b7ea 0%,#c45ebd 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #00b7ea 0%,#c45ebd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#c45ebd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
+
+.containerForm{
+    opacity: .90;
+    
+}
+
+.containerForm:hover{
+    opacity: 1;
+}
+

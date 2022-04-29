@@ -1,0 +1,10 @@
+.sidebar{
+    background: 
+    linear-gradient(-52deg,#2b455f85 30%,transparent 20%),
+    linear-gradient(65deg,#253c52 40%,transparent 30%),
+    linear-gradient(to bottom, #1f3850 60%,#132230 100%)
+    
+}
+.logoSidebar{
+    -webkit-filter: drop-shadow(1px 1px 0px rgb(209, 209, 209));
+}

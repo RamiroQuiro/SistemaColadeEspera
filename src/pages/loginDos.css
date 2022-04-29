@@ -1,0 +1,19 @@
+.banner {
+    background: url( 'https://s1.1zoom.me/b6058/448/Dogs_Svetlana_Shelemeteva_Hug_Little_girls_568770_1920x1080.jpg' );
+    background-repeat: no-repeat;
+    background-size: cover        
+}
+
+.bgColor{
+    opacity: .8;
+    background: #00b7ea; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #00b7ea 0%, #c45ebd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #00b7ea 0%,#c45ebd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #00b7ea 0%,#c45ebd 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#c45ebd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+}
+
+.logoLogin{
+    -webkit-filter: drop-shadow(1px 1px 0px rgb(209, 209, 209));
+}
