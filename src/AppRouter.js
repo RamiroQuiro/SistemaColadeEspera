@@ -14,12 +14,14 @@ import ListadeVentanilla from './pages/ListadeVentanilla';
 import VisorFilas from './pages/VisorFilas';
 import ComprobanteTurno from './pages/ComprobanteTurno';
 import { Auth } from './context/ContextProvider';
+import SemanaChart from './pages/SemanaChart';
 
 function App() {
 
   const {profileUser}= Auth()
   return (
     <Routes>
+      <Route path="/semanaChart" element={<SemanaChart />} />
       <Route path="/" index element={<LoginCornejo />} />
       <Route path="/turnero" element={<Turnero/>} />
       <Route path="/comprobante" element={<ComprobanteTurno/>} />

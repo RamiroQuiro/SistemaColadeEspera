@@ -5,6 +5,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   createUserWithEmailAndPassword,
+  deleteUser,
 } from "firebase/auth";
 
 import { useNavigate } from 'react-router-dom';
@@ -51,6 +52,7 @@ const createUsers= async(email, password,rol,ventanilla,box ,userName) =>{
     rol:rol,
     ventanilla:ventanilla,
     box:box,
+    uid:infoUser.user.uid
   })
 };
 
@@ -64,7 +66,11 @@ const createUsers= async(email, password,rol,ventanilla,box ,userName) =>{
 }
 
 // traer Usuarios
-const traerUsers=()=>{}
+const borrarUsuario=(uid)=>{
+  const user = useAuth.uid;
+  deleteUser(uid)
+  console.log(uid)
+}
 
 // crear Filas
 const crearFila= async (fila)=>{
@@ -140,6 +146,7 @@ useEffect(() => {
   profileUser,
   setProfileUser,
   user,
+  borrarUsuario,
   crearTurno,createUsers}}>
 
     {children}

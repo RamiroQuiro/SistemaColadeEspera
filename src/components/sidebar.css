@@ -1,8 +1,9 @@
 .sidebar{
+    height: 100vh;
     background: 
     linear-gradient(-52deg,#2b455f85 30%,transparent 20%),
     linear-gradient(65deg,#253c52 40%,transparent 30%),
-    linear-gradient(to bottom, #1f3850 60%,#132230 100%)
+    linear-gradient(to bottom, #1f3850 60%,#132230 100%);
     
 }
 .logoSidebar{

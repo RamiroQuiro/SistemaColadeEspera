@@ -70,7 +70,7 @@ const options = serviciosList.map(items=>
           e.preventDefault()
           crearVentanilla(ventanilla)
         }}
-        className="  my-2 px-2 ml-1 bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 focus:outline-none focus:ring focus:ring-cyan-300 rounded-lg p-2 text-white duration-300 font-bold">
+        className="px-3 my-2 ml-1 bg-blue-400  hover:bg-blue-500 active:bg-blue-600 focus:outline-none focus:ring focus:ring-cyan-300 rounded-lg p-2 text-white duration-300 font-bold">
           Crear Ventanilla
         </button>
     

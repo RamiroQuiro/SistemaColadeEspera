@@ -14,7 +14,7 @@ const atendiendoAhora = ({fila,nTurno,handleDeleteTurnos,atendiendoAhora}) => {
       Atendiendo Ahora
     </h1>
     <div className="bg-blue-400  text-center my-1 px-3 py-2 rounded shadow-md">
-      <h2 className="inline-block text-2xl mx-4">Fila :</h2>
+      <h2 className="inline-block font-medium text-2xl mx-4">Fila :</h2>
       <h2 className="inline-block mx-4 text-3xl font-bold">
          {
         atendiendoAhora[atendiendoAhora.length-1]?.fila

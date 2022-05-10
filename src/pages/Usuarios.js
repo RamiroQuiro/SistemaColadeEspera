@@ -3,13 +3,16 @@ import React, { useEffect, useState } from 'react'
 import { FiSearch } from 'react-icons/fi';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { db } from '../components/configFirebase';
+import { Auth } from '../context/ContextProvider';
 
 
 export default function Usuarios() {
 
   const [ usersList , setUsersList]=useState([])
   const userCollection = collection(db,"usuarios")
- 
+
+  const {borrarUsuario}=Auth()
+
 const navigate = useNavigate()
     const handleCreateUsers = () => {
       navigate("createUser");
@@ -46,7 +49,7 @@ setUsersList(array);
       
         <button 
         onClick={handleCreateUsers}
-        className=" h-10  bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 focus:outline-none focus:ring focus:ring-cyan-300 rounded-lg p-2 text-white font-bold">
+        className=" h-10  bg-blue-400 hover:bg-blue-500 active:bg-blue-600 focus:outline-none focus:ring focus:ring-cyan-300 rounded-lg p-2 text-white font-bold">
           Crear Usuarios
         </button>
     
@@ -103,14 +106,14 @@ setUsersList(array);
             </td>
 
             <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-              <div className="text font-bold text-center leading-5 text-gray-900">
+              <div className="text font-bold text-left leading-5 text-gray-900">
                 {user.ventanilla}
               </div>
             </td>
 
             <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-              <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                {user.active? "Active":'Inactive'}
+              <span className="px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-green-100 text-green-800">
+                {user.active? "Active":'Active'}
               </span>
             </td>
 
@@ -119,13 +122,13 @@ setUsersList(array);
             </td>
 
             <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-              <a href="#" className="text-indigo-600 hover:text-indigo-900">
+              <button onClick={()=>borrarUsuario(user.uid)} className="text-indigo-600 hover:text-indigo-900">
                 Delet
-              </a>
+              </button>
               {'   |   '}
-              <a href="#" className="text-indigo-600 hover:text-indigo-900">
+              <button href="#" className="text-indigo-600 hover:text-indigo-900">
                 Edit
-              </a>
+              </button>
             </td>
             
           </tr>

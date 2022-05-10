@@ -31,9 +31,9 @@ setToggle(!toggle)
 
 
   return (
-    <div className="grid  grid-cols-7 grid-rows-1  h-screen   ">
+    <div className="grid  grid-cols-7 grid-rows-1    ">
 
-      <nav className="bg-zinc-800  sidebar flex flex-col sidebar box border-r border-gray-300 ">
+      <nav className="bg-zinc-800  sidebar min-h-full box border-r border-gray-300 ">
         <Sidebar />
       </nav>
 
@@ -58,7 +58,7 @@ setToggle(!toggle)
               </div>
             </div>
           </nav>
-          <div className="rounded-lg border border-gray-50 bg-white shadow-lg  w-full p-5 mx-auto mb-8">
+          <div className="rounded-lg  bg-white shadow-lg  w-full p-5 mx-auto mb-8">
             <Outlet />
           </div>
         </div>
