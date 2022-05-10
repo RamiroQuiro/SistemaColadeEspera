@@ -89,9 +89,6 @@ export default function VisorFilas() {
   useEffect(() => {
     const traerVen = async () => {
       const ventanillas = await traerVentanillas();
-      // console.log(
-      //   ventanillas.filter((ventanilla) => ventanilla.nombre === params.fila)
-      // );
     };
     traerVen();
   }, []);

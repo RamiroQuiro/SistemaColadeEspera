@@ -69,7 +69,6 @@ const createUsers= async(email, password,rol,ventanilla,box ,userName) =>{
 const borrarUsuario=(uid)=>{
   const user = useAuth.uid;
   deleteUser(uid)
-  console.log(uid)
 }
 
 // crear Filas
@@ -119,14 +118,12 @@ const datos=data?.data()[fila]
 const traerTurnos=async ()=>{
   const data=await getDoc(colasCollectionRef)
   const info=data.data().turnos
-console.log( info.filter(turno=>ventanillas?.servicios?.filter.includes(turno.fila)))
 return data
 }
 
 
 useEffect(() => {
   const unsubscribe =  onAuthStateChanged(useAuth, (currentUser) => {
-    console.log( currentUser);
     setUser(currentUser);
     traerProfileUser(currentUser.uid)
 

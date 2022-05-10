@@ -34,7 +34,6 @@ setUsersList(array);
 },[])
 
 const handlemModificador=(uid)=>{
-  console.log(uid)
   navigate("createUser");
 }
 

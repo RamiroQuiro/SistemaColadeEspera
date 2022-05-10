@@ -79,7 +79,6 @@ export default function Home() {
 
   const resetearYGuardarRegistro = async () => {
     const event = reloj.year + "-" + reloj.mes + "-" + reloj.dia;
-    console.log(new Date(event));
     await updateDoc(registroCollectionRef, {
       atencionDia: arrayUnion({
         totalTurnos: atendidos?.length,
