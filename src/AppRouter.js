@@ -23,6 +23,7 @@ function App() {
     <Routes>
       <Route path="/semanaChart" element={<SemanaChart />} />
       <Route path="/" index element={<LoginCornejo />} />
+      <Route path="/resetaerPass/:email" index element={<LoginCornejo />} />
       <Route path="/turnero" element={<Turnero/>} />
       <Route path="/comprobante" element={<ComprobanteTurno/>} />
       <Route path="/visor" element={<Visor />} >
@@ -36,6 +37,7 @@ function App() {
         <Route path="listadeVentanilla" element={profileUser.rol==="admin"? <ListadeVentanilla />:<Home/>}/>
         
         <Route path="users/createUser" element={profileUser.rol==="admin"? <CreateUser />:<Home/>}/>
+        <Route path="users/createUser/:uid" element={ <CreateUser />}/>
       </Route>
     </Routes>
   );

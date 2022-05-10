@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import { Link ,useNavigate} from 'react-router-dom'
+import { Link ,useNavigate, useParams} from 'react-router-dom'
 import "./loginDos.css"
 import imgLogo from "../img/logoCepsi.png";
 import toast, { Toaster } from 'react-hot-toast';
 import {Auth} from '../context/ContextProvider';
+import { updatePassword } from 'firebase/auth';
 
 
 export default function LoginDos() {
-  
+  const params=useParams()
   const [loginUser, setLoginUser]=useState({
     email: 'rama.exe.13@gmail.com',
     Id:555,
@@ -26,7 +27,10 @@ const handleSubmit=async (e)=>{
   try {
      await login(loginUser.email,loginUser.password)
      toast.success('Sesion ingresada correctamente')
-     navigate('/home')
+     setTimeout(() => {
+
+       navigate('/home')
+     },800)
   } catch (error) {
     switch(error.code) {
       case 'auth/invalid-password':
@@ -52,6 +56,7 @@ const handleSubmit=async (e)=>{
     }
   }
 }
+
 
   return (
     <div className="grid banner max-h-screen h-screen grid-cols-12">
@@ -91,12 +96,12 @@ const handleSubmit=async (e)=>{
                 placeholder="Escribe aqui tu contraseña"
                 className="w-full bg-white py-3 px-4 text-black border font-medium rounded shadow text-base font-sans"
               />
-              {/* <Link
-                to="/hola"
-                className="text-sm font-sans font-medium text-gray-600 underline"
+              <Link
+                to={"/resetaerPass/"+loginUser.email}
+                className="text-sm font-sans font-medium text-gray-800 underline"
               >
                 ¿Olvidaste la Contraseña?
-              </Link> */}
+              </Link> 
             </div>
             {/* <!-- Button --> */}
             <div className="text-lg font-sans  w-full mx-auto pt-10">
@@ -104,7 +109,7 @@ const handleSubmit=async (e)=>{
                 type="submit"
                 className="text-center  font-medium px-5 py-2 bg-blue-500 hover:bg-blue-300 hover:text-gray-500 duration-300 rounded-md text-white"
               >
-                Ingresar
+               {params?.email? 'Resetear Constraseña': 'Ingresar'}
               </button>
             </div>
           </form>

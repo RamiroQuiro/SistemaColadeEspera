@@ -1,6 +1,7 @@
 import { collection, doc, getDocs } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import { FiSearch } from 'react-icons/fi';
+import {CgProfile} from 'react-icons/cg'
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { db } from '../components/configFirebase';
 import { Auth } from '../context/ContextProvider';
@@ -32,6 +33,10 @@ setUsersList(array);
   getUsers()
 },[])
 
+const handlemModificador=(uid)=>{
+  console.log(uid)
+  navigate("createUser");
+}
 
   return (
     <div>
@@ -86,12 +91,9 @@ setUsersList(array);
           className="hover:bg-gray-50 duration-300 cursor-pointer">
             <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
               <div className="flex items-center">
-                <div className="flex-shrink-0 h-10 w-10">
-                  <img
-                    className="h-10 w-10 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
-                    alt=""
-                  />
+                <div className="flex-shrink-0 text-3xl text-zinc-400">
+                <CgProfile/>
+                  
                 </div>
 
                 <div className="ml-4">
@@ -126,9 +128,12 @@ setUsersList(array);
                 Delet
               </button>
               {'   |   '}
-              <button href="#" className="text-indigo-600 hover:text-indigo-900">
+              <Link 
+              to={"createUser"+"/"+user.uid}
+              // onClick={()=>handlemModificador(user.uid)}
+              className="text-indigo-600 hover:text-indigo-900">
                 Edit
-              </button>
+              </Link>
             </td>
             
           </tr>
