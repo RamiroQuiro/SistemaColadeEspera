@@ -23,7 +23,6 @@ export default function CreateUser() {
   const [ventanillas, setVentanillas] = useState([]);
   const[editUser,setEditUser]=useState(false)
 
-  console.log(params.uid);
 
   const { createUsers, resetPassword, traerVentanillas } = Auth();
 

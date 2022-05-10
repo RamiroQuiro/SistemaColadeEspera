@@ -5,7 +5,6 @@ import {Auth} from '../context/ContextProvider'
 
 export default function PrivateRouter({children}) {
     const {user}= Auth()
-    console.log(user)
   
     
   

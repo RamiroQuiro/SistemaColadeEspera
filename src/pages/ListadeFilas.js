@@ -65,10 +65,12 @@ useEffect(()=>{
          {
 
            !filasList?<span className="absolute font-bold text-2xl">Loading...</span>:
-           filasList.map(fila =>(
+           filasList.map((fila,i) =>(
 
            
-          <tr className="hover:bg-gray-50 duration-300 cursor-pointer">
+          <tr 
+          key={i}
+          className="hover:bg-gray-50 duration-300 cursor-pointer">
             <td className="px-6 py-4 whitespace-no-wrap font-medium border-b border-gray-200"> {filasList.indexOf(fila)+1}</td>
             <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                   <div className="text-sm leading-5 uppercase font-medium text-gray-900">

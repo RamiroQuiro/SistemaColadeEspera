@@ -18,7 +18,6 @@ export default function LoginDos() {
   
     const{login,user}=Auth()
 const handleChange=(e)=> {
-  console.log({ [e.target.name]:e.target.value})
   setLoginUser({...loginUser, [e.target.name]:e.target.value})}
 
 
