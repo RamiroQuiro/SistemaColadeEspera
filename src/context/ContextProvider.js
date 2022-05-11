@@ -8,10 +8,7 @@ import {
   deleteUser,
 } from "firebase/auth";
 
-import { useNavigate } from 'react-router-dom';
-import { doc, setDoc,collection, addDoc ,getDocs,  getDoc, documentId, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
-import { async } from '@firebase/util';
-import { v4 as uuidv4 } from 'uuid';
+import { doc, setDoc,   getDoc,  updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
 
 
 const AuthContext = createContext()
@@ -28,8 +25,6 @@ const useAuth = getAuth(app)
 
 const [user,setUser]=  useState(null)
 const [profileUser,setProfileUser]=  useState({})
-const [ventanillas,setVentanillas]= useState([])
-const [contador,setContador] =useState(1)
 
 
 const boxCollectionRef = doc(db,"box&filas","filas&box")

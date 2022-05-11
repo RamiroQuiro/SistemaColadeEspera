@@ -1,4 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type";
 import {
   arrayUnion,
   doc,
@@ -10,12 +9,11 @@ import {
 import React, { useEffect, useState } from "react";
 import { db } from "../components/configFirebase";
 import { Auth } from "../context/ContextProvider";
-import DatePicker, { Calendar, DateObject } from "react-multi-date-picker";
 import SemanaChart from "./SemanaChart";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const { user, profileUser, traerVentanillas } = Auth();
+  const {  profileUser, traerVentanillas } = Auth();
   const [coladeEspera, setColadeEspera] = useState(false);
   const [colaDeEsperaDisponible, setColaDeEsperaDisponible] = useState(false);
   const [ventanillas, setVentanillas] = useState(false);

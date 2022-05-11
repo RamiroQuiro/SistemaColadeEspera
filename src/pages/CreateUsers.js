@@ -1,8 +1,8 @@
-import { updateEmail, updatePassword } from "firebase/auth";
+import {  updatePassword } from "firebase/auth";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import {  Navigate, useNavigate, useParams } from "react-router-dom";
 import { db } from "../components/configFirebase";
 import { Auth } from "../context/ContextProvider";
 
@@ -19,9 +19,7 @@ export default function CreateUser() {
     ventanilla: "",
     box: "",
   });
-  const [error, setError] = useState("");
   const [ventanillas, setVentanillas] = useState([]);
-  const[editUser,setEditUser]=useState(false)
 
 
   const { createUsers, resetPassword, traerVentanillas } = Auth();

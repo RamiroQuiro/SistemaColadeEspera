@@ -1,17 +1,15 @@
 import React from 'react'
 import { Link,} from 'react-router-dom'
 import imgLogo from "../img/logoCepsi.png";
-import { FaBeer } from 'react-icons/fa';
-import { FiHome,FiMonitor,FiUsers,FiGitPullRequest, FiLayers } from "react-icons/fi";
+import {FiLayers } from "react-icons/fi";
 import { FaWindowRestore,FaWindowMaximize,FaUserAlt } from "react-icons/fa";
 import { MdDashboard} from "react-icons/md";
-import RutaAdmin from './RutaAdmin';
 import { Auth } from '../context/ContextProvider';
 
 
 export default function Sidebar() {
 
-  const {user,profileUser}=Auth()
+  const {profileUser}=Auth()
 
   return (
    <>
