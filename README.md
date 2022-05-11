@@ -11,7 +11,7 @@ El usuario de rol **Regular**, tendar como secciones, su dashboar en donde vera 
 
 
 ## Demo
-El demoLive del proyecto esta deployado en  [Demo of the proyect](https://cola-de-espera.vercel.app/)
+El demoLive del proyecto esta deployado en  [cola-de-espera.vercel.app](https://cola-de-espera.vercel.app/)
 
 
 ## Primeros Pasos
@@ -32,14 +32,14 @@ Usuario Regular: atencion1@admin.com
 ## Vista de Pantallas
 
 **Pantalla de entrada para los usuarios**
-![](/src/img/login.png)
+![](/src/img/Login.png)
 
 **Pantalla de para quien otorga los numeros**
 ![](/src/img/Turnero.png)
 
 **Pantalla de Visor de Turnos**
 En esta pantalla se podra elegir por Fila o podra personalizar por vairas filas de ser necesario
-![](/src/img/Visor de Numeros.png)
+![](/src/img/Visor%20de%20Numeros.png)
 
 
 ## Tecnologias utilizadas
